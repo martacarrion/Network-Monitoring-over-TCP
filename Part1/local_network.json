@@ -1,0 +1,71 @@
+{
+    "hostname": "Ubuntu",
+    "interfaces": [
+        {
+            "name": "lo",
+            "mtu": 65536,
+            "mac_address": "00:00:00:00:00:00",
+            "flags": [
+                "LOOPBACK",
+                "UP",
+                "LOWER_UP"
+            ],
+            "state": "UNKNOWN",
+            "ip_addresses": [
+                {
+                    "family": "inet",
+                    "address": "127.0.0.1",
+                    "prefix_length": 8
+                },
+                {
+                    "family": "inet6",
+                    "address": "::1",
+                    "prefix_length": 128
+                }
+            ]
+        },
+        {
+            "name": "enp0s3",
+            "mtu": 1500,
+            "mac_address": "08:00:27:48:4c:72",
+            "flags": [
+                "BROADCAST",
+                "MULTICAST",
+                "UP",
+                "LOWER_UP"
+            ],
+            "state": "UP",
+            "ip_addresses": [
+                {
+                    "family": "inet",
+                    "address": "10.0.2.15",
+                    "prefix_length": 24
+                },
+                {
+                    "family": "inet6",
+                    "address": "fd17:625c:f037:2:a00:27ff:fe48:4c72",
+                    "prefix_length": 64
+                },
+                {
+                    "family": "inet6",
+                    "address": "fe80::a00:27ff:fe48:4c72",
+                    "prefix_length": 64
+                }
+            ]
+        }
+    ],
+    "routes": [
+        {
+            "destination": "default",
+            "gateway": "10.0.2.2",
+            "interface": "enp0s3",
+            "protocol": "dhcp"
+        },
+        {
+            "destination": "10.0.2.0/24",
+            "gateway": null,
+            "interface": "enp0s3",
+            "protocol": "kernel"
+        }
+    ]
+}
